@@ -13,8 +13,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Domain", "src\PocketCard.Domain\PocketCard.Domain.csproj", "{58D39B75-8902-4579-932E-158CDADC3B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Application", "src\PocketCard.Application\PocketCard.Application.csproj", "{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Infrastructure", "src\PocketCard.Infrastructure\PocketCard.Infrastructure.csproj", "{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Api", "src\PocketCard.Api\PocketCard.Api.csproj", "{1914FF16-94E1-4FCF-932C-0025DA6AA380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Web", "src\PocketCard.Web\PocketCard.Web.csproj", "{79F28F4D-1116-4746-ACC9-F3701930754B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58D39B75-8902-4579-932E-158CDADC3B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D39B75-8902-4579-932E-158CDADC3B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D39B75-8902-4579-932E-158CDADC3B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D39B75-8902-4579-932E-158CDADC3B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1914FF16-94E1-4FCF-932C-0025DA6AA380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1914FF16-94E1-4FCF-932C-0025DA6AA380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1914FF16-94E1-4FCF-932C-0025DA6AA380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1914FF16-94E1-4FCF-932C-0025DA6AA380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F28F4D-1116-4746-ACC9-F3701930754B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F28F4D-1116-4746-ACC9-F3701930754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F28F4D-1116-4746-ACC9-F3701930754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F28F4D-1116-4746-ACC9-F3701930754B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58D39B75-8902-4579-932E-158CDADC3B4A} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
+		{8AD796CC-EE61-4AE1-B4B1-FF30D536537D} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
+		{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
+		{1914FF16-94E1-4FCF-932C-0025DA6AA380} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
+		{79F28F4D-1116-4746-ACC9-F3701930754B} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
 	EndGlobalSection
 EndGlobal
