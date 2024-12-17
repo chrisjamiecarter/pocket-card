@@ -1,6 +1,7 @@
-using PocketCard.Web.Components;
+using PocketCards.Web.Components;
 
 namespace PocketCards.Web;
+
 public class Program
 {
     public static void Main(string[] args)

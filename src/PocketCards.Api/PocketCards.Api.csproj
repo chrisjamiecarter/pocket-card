@@ -4,10 +4,20 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>d87d67fd-8c12-4162-8eed-79efea03b1ab</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Scalar.AspNetCore" Version="1.2.61" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PocketCards.Infrastructure\PocketCards.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
