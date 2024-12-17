@@ -15,7 +15,7 @@ public class Program
             builder.Configuration.AddUserSecrets<Program>();
         }
         builder.Services.AddApi();
-        builder.Services.AddApplication();
+        builder.Services.AddApplication(builder.Configuration);
         builder.Services.AddInfrastructure(builder.Configuration);
 
         var app = builder.Build();

@@ -18,18 +18,6 @@ internal class PocketCardRepository(PocketCardsDbContext context) : RepositoryBa
         return result > 0;
     }
 
-    public async Task<bool> DeleteAsync(PocketCard card)
-    {
-        var entity = await _context.PocketCards.FindAsync(card.Id);
-        if (entity is not null)
-        {
-            _context.PocketCards.Remove(card);
-        }
-
-        var result = await SaveChangesAsync();
-        return result > 0;
-    }
-
     public async Task<IReadOnlyList<PocketCard>> ReturnByRarityAsync(PocketCardRarity rarity)
     {
         return await _context.PocketCards.Where(x => x.Rarity == rarity).ToListAsync();

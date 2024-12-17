@@ -12,7 +12,7 @@ using PocketCards.Infrastructure.Contexts;
 namespace PocketCards.Infrastructure.Migrations
 {
     [DbContext(typeof(PocketCardsDbContext))]
-    [Migration("20241217193128_InitialCreate")]
+    [Migration("20241217205035_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
