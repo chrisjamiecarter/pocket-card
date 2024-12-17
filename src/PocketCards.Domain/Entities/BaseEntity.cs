@@ -1,4 +1,4 @@
-﻿namespace PocketCard.Domain.Entities;
+﻿namespace PocketCards.Domain.Entities;
 
 public class BaseEntity
 {

@@ -1,4 +1,4 @@
-namespace PocketCard.Api;
+namespace PocketCards.Api;
 
 public class WeatherForecast
 {

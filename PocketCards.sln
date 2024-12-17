@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Domain", "src\PocketCard.Domain\PocketCard.Domain.csproj", "{58D39B75-8902-4579-932E-158CDADC3B4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCards.Domain", "src\PocketCards.Domain\PocketCards.Domain.csproj", "{58D39B75-8902-4579-932E-158CDADC3B4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Application", "src\PocketCard.Application\PocketCard.Application.csproj", "{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCards.Application", "src\PocketCards.Application\PocketCards.Application.csproj", "{8AD796CC-EE61-4AE1-B4B1-FF30D536537D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Infrastructure", "src\PocketCard.Infrastructure\PocketCard.Infrastructure.csproj", "{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCards.Infrastructure", "src\PocketCards.Infrastructure\PocketCards.Infrastructure.csproj", "{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Api", "src\PocketCard.Api\PocketCard.Api.csproj", "{1914FF16-94E1-4FCF-932C-0025DA6AA380}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCards.Api", "src\PocketCards.Api\PocketCards.Api.csproj", "{1914FF16-94E1-4FCF-932C-0025DA6AA380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCard.Web", "src\PocketCard.Web\PocketCard.Web.csproj", "{79F28F4D-1116-4746-ACC9-F3701930754B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCards.Web", "src\PocketCards.Web\PocketCards.Web.csproj", "{79F28F4D-1116-4746-ACC9-F3701930754B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
