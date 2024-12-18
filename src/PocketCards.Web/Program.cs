@@ -1,4 +1,5 @@
 using PocketCards.Web.Components;
+using PocketCards.Web.Options;
 
 namespace PocketCards.Web;
 
@@ -11,6 +12,8 @@ public class Program
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
+
+        builder.Services.Configure<ApiOptions>(builder.Configuration.GetSection(nameof(ApiOptions)));
 
         var app = builder.Build();
 
