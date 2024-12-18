@@ -13,6 +13,8 @@ internal class PocketCardConfiguration : IEntityTypeConfiguration<PocketCard>
         builder.HasKey(pk => pk.Id);
 
         builder.Property(p => p.Number).IsRequired();
+        builder.HasIndex(p => p.Number).IsUnique();
+
         builder.Property(p => p.Name).IsRequired();
 
         builder.Property(p => p.Rarity).HasConversion<int>();

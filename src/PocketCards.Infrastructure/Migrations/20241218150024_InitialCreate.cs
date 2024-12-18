@@ -16,7 +16,7 @@ namespace PocketCards.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,7 +28,7 @@ namespace PocketCards.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Number = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageFilePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rarity = table.Column<int>(type: "int", nullable: false),
@@ -51,9 +51,21 @@ namespace PocketCards.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_PocketCard_Number",
+                table: "PocketCard",
+                column: "Number",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PocketCard_PocketPackId",
                 table: "PocketCard",
                 column: "PocketPackId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PocketPack_Name",
+                table: "PocketPack",
+                column: "Name",
+                unique: true);
         }
 
         /// <inheritdoc />

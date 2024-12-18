@@ -12,7 +12,7 @@ using PocketCards.Infrastructure.Contexts;
 namespace PocketCards.Infrastructure.Migrations
 {
     [DbContext(typeof(PocketCardsDbContext))]
-    [Migration("20241217205035_InitialCreate")]
+    [Migration("20241218150024_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -47,7 +47,7 @@ namespace PocketCards.Infrastructure.Migrations
 
                     b.Property<string>("Number")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("PackPoints")
                         .HasColumnType("int");
@@ -66,6 +66,9 @@ namespace PocketCards.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Number")
+                        .IsUnique();
+
                     b.HasIndex("PocketPackId");
 
                     b.ToTable("PocketCard", (string)null);
@@ -79,9 +82,12 @@ namespace PocketCards.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("PocketPack", (string)null);
                 });

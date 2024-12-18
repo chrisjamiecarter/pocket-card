@@ -18,6 +18,11 @@ internal class PocketCardRepository(PocketCardsDbContext context) : RepositoryBa
         return result > 0;
     }
 
+    public async Task<PocketCard?> ReturnByNumberAsync(string number)
+    {
+        return await _context.PocketCards.SingleOrDefaultAsync(x => x.Number == number);
+    }
+
     public async Task<IReadOnlyList<PocketCard>> ReturnByRarityAsync(PocketCardRarity rarity)
     {
         return await _context.PocketCards.Where(x => x.Rarity == rarity).ToListAsync();

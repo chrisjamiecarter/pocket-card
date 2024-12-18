@@ -13,5 +13,6 @@ internal class PocketPackConfiguration : IEntityTypeConfiguration<PocketPack>
         builder.HasKey(pk => pk.Id);
 
         builder.Property(p => p.Name).IsRequired();
+        builder.HasIndex(p => p.Name).IsUnique();
     }
 }

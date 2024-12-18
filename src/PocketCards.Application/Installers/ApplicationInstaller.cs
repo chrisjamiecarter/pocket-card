@@ -8,7 +8,7 @@ namespace PocketCards.Application.Installers;
 
 public static class ApplicationInstaller
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services, IConfigurationRoot configuration)
+    public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<CdnOptions>(configuration.GetSection(nameof(CdnOptions)));
 

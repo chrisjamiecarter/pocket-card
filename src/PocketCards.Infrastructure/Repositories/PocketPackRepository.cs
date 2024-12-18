@@ -1,4 +1,5 @@
-﻿using PocketCards.Application.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using PocketCards.Application.Repositories;
 using PocketCards.Domain.Entities;
 using PocketCards.Infrastructure.Contexts;
 
@@ -14,5 +15,10 @@ internal class PocketPackRepository(PocketCardsDbContext context) : RepositoryBa
 
         var result = await SaveChangesAsync();
         return result > 0;
+    }
+
+    public async Task<PocketPack?> ReturnByNameAsync(string name)
+    {
+        return await _context.PocketPacks.SingleOrDefaultAsync(x => x.Name == name);
     }
 }

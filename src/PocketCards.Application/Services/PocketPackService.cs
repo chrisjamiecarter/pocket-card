@@ -20,4 +20,9 @@ public class PocketPackService(IPocketPackRepository repository) : IPocketPackSe
     {
         return await repository.ReturnAsync(id);
     }
+
+    public async Task<PocketPack?> ReturnByNameAsync(string name)
+    {
+        return await repository.ReturnByNameAsync(name);
+    }
 }

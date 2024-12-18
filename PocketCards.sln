@@ -363,6 +363,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{1865B932-DAD
 		img\feccf1ec597240eea0633c9319bd861a.png = img\feccf1ec597240eea0633c9319bd861a.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketCards.DataLoader", "src\PocketCards.DataLoader\PocketCards.DataLoader.csproj", "{06F2A82C-8D05-4A23-B3F0-AE56C875B9E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -389,6 +391,10 @@ Global
 		{79F28F4D-1116-4746-ACC9-F3701930754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79F28F4D-1116-4746-ACC9-F3701930754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F28F4D-1116-4746-ACC9-F3701930754B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F2A82C-8D05-4A23-B3F0-AE56C875B9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F2A82C-8D05-4A23-B3F0-AE56C875B9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F2A82C-8D05-4A23-B3F0-AE56C875B9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F2A82C-8D05-4A23-B3F0-AE56C875B9E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -399,5 +405,6 @@ Global
 		{4CF21ECC-0D42-4DA0-AB15-FAB76FE6D29B} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
 		{1914FF16-94E1-4FCF-932C-0025DA6AA380} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
 		{79F28F4D-1116-4746-ACC9-F3701930754B} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
+		{06F2A82C-8D05-4A23-B3F0-AE56C875B9E1} = {90AC4A2F-1D6A-4FE0-B19C-BB285BEECA32}
 	EndGlobalSection
 EndGlobal

@@ -12,8 +12,6 @@ public class PocketCardService(IPocketCardRepository repository, IOptions<CdnOpt
 {
     public async Task<bool> CreateAsync(PocketCard card)
     {
-        card.ImageFilePath = GetValidImageFilePath(card.ImageFilePath);
-
         return await repository.CreateAsync(card);
     }
 
@@ -25,6 +23,11 @@ public class PocketCardService(IPocketCardRepository repository, IOptions<CdnOpt
     public async Task<PocketCard?> ReturnByIdAsync(Guid id)
     {
         return await repository.ReturnAsync(id);
+    }
+
+    public async Task<PocketCard?> ReturnByNumberAsync(string number)
+    {
+        return await repository.ReturnByNumberAsync(number);
     }
 
     public async Task<IReadOnlyList<PocketCard>> ReturnByRarityAsync(PocketCardRarity rarity)
@@ -39,15 +42,16 @@ public class PocketCardService(IPocketCardRepository repository, IOptions<CdnOpt
 
     public async Task<bool> UpdateAsync(PocketCard card)
     {
-        card.ImageFilePath = GetValidImageFilePath(card.ImageFilePath);
-
         return await repository.UpdateAsync(card);
     }
 
-    private string GetValidImageFilePath(string imageFilePath)
+    public string GetImageFilePath(string imageFileName)
     {
-        return string.IsNullOrWhiteSpace(imageFilePath)
-            ? Path.Combine(cdnOptions.Value.PocketCardImageHostUrl, DefaultValues.DefaultPocketCardImageFileName)
-            : imageFilePath;
+        if (string.IsNullOrWhiteSpace(imageFileName))
+        {
+            imageFileName = DefaultValues.DefaultPocketCardImageFileName;
+        }
+
+        return Path.Combine(cdnOptions.Value.PocketCardImageHostUrl, imageFileName);
     }
 }

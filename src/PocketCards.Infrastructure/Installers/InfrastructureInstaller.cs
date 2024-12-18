@@ -9,7 +9,7 @@ namespace PocketCards.Infrastructure.Installers;
 
 public static class InfrastructureInstaller
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfigurationRoot configuration)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("PocketCards") ?? throw new InvalidOperationException("Connection string 'PocketCards' not found");
 
