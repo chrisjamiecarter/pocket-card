@@ -10,7 +10,6 @@ namespace PocketCards.DataLoader;
 
 internal class App : BackgroundService
 {
-    private readonly IConfiguration _configuration;
     private readonly IHost _host;
     private readonly ILogger<App> _logger;
     private readonly IPocketCardService _pocketCardService;
@@ -21,9 +20,8 @@ internal class App : BackgroundService
     private readonly string _workingDirectoryPath;
     private readonly JsonSerializerOptions _jsonSerializerOptions;
 
-    public App(IConfiguration configuration, IHost host, ILogger<App> logger, IPocketCardService pocketCardService, IPocketPackService pocketPackService)
+    public App(IHost host, ILogger<App> logger, IPocketCardService pocketCardService, IPocketPackService pocketPackService)
     {
-        _configuration = configuration;
         _host = host;
         _logger = logger;
         _pocketCardService = pocketCardService;
@@ -168,6 +166,5 @@ internal class App : BackgroundService
     private void PerformHousekeeping()
     {
         _logger.LogDebug("TODO");
-        //throw new NotImplementedException();
     }
 }
