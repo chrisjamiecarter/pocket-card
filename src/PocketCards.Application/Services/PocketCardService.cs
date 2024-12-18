@@ -52,6 +52,6 @@ public class PocketCardService(IPocketCardRepository repository, IOptions<CdnOpt
             imageFileName = DefaultValues.DefaultPocketCardImageFileName;
         }
 
-        return Path.Combine(cdnOptions.Value.PocketCardImageHostUrl, imageFileName);
+        return Path.Combine(cdnOptions.Value.PocketCardsImageHostUrl, imageFileName);
     }
 }

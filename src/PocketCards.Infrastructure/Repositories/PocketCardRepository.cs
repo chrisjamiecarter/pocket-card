@@ -18,6 +18,11 @@ internal class PocketCardRepository(PocketCardsDbContext context) : RepositoryBa
         return result > 0;
     }
 
+    public async Task<IReadOnlyList<PocketCard>> ReturnAsync()
+    {
+        return await _context.PocketCards.OrderBy(x => x.Number).ToListAsync();
+    }
+
     public async Task<PocketCard?> ReturnByNumberAsync(string number)
     {
         return await _context.PocketCards.SingleOrDefaultAsync(x => x.Number == number);
@@ -25,12 +30,12 @@ internal class PocketCardRepository(PocketCardsDbContext context) : RepositoryBa
 
     public async Task<IReadOnlyList<PocketCard>> ReturnByRarityAsync(PocketCardRarity rarity)
     {
-        return await _context.PocketCards.Where(x => x.Rarity == rarity).ToListAsync();
+        return await _context.PocketCards.Where(x => x.Rarity == rarity).OrderBy(x => x.Number).ToListAsync();
     }
 
     public async Task<IReadOnlyList<PocketCard>> ReturnByTypeAsync(PocketCardType type)
     {
-        return await _context.PocketCards.Where(x => x.Type == type).ToListAsync();
+        return await _context.PocketCards.Where(x => x.Type == type).OrderBy(x => x.Number).ToListAsync();
     }
 
     public async Task<bool> UpdateAsync(PocketCard card)

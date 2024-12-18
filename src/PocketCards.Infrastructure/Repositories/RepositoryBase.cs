@@ -7,11 +7,6 @@ namespace PocketCards.Infrastructure.Repositories;
 
 internal abstract class RepositoryBase<T>(PocketCardsDbContext context) where T : BaseEntity
 {
-    public async Task<IReadOnlyList<T>> ReturnAsync()
-    {
-        return await context.Set<T>().ToListAsync();
-    }
-
     public async Task<T?> ReturnAsync(Guid id)
     {
         return await context.Set<T>().FindAsync(id);

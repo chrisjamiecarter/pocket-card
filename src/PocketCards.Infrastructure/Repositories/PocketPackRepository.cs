@@ -17,6 +17,11 @@ internal class PocketPackRepository(PocketCardsDbContext context) : RepositoryBa
         return result > 0;
     }
 
+    public async Task<IReadOnlyList<PocketPack>> ReturnAsync()
+    {
+        return await _context.PocketPacks.OrderBy(x => x.Name).ToListAsync();
+    }
+
     public async Task<PocketPack?> ReturnByNameAsync(string name)
     {
         return await _context.PocketPacks.SingleOrDefaultAsync(x => x.Name == name);
