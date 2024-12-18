@@ -1,6 +1,4 @@
-﻿using System.Dynamic;
-using System.Reflection.Metadata.Ecma335;
-using System.Text.Json;
+﻿using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -94,7 +92,7 @@ internal class App : BackgroundService
                         continue;
                     }
 
-                    foreach(var dataItem in pocketCardDataItems)
+                    foreach (var dataItem in pocketCardDataItems)
                     {
                         var pocketPack = await _pocketPackService.ReturnByNameAsync(dataItem.Pack);
                         if (pocketPack is null)
@@ -145,7 +143,7 @@ internal class App : BackgroundService
         {
             _logger.LogError("{message}", exception.Message);
         }
-        
+
         await _host.StopAsync(stoppingToken);
     }
 
@@ -153,7 +151,7 @@ internal class App : BackgroundService
     {
         string directoryName = $"{DateTime.Now:yyyyMMdd-HHmmss}";
         string directoryPath = Path.Combine(_workingDirectoryPath, directoryName);
-                
+
         while (Directory.Exists(directoryPath))
         {
             Thread.Sleep(1000);

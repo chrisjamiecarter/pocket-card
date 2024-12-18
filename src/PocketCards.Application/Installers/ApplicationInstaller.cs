@@ -10,6 +10,7 @@ public static class ApplicationInstaller
 {
     public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
     {
+        services.Configure<ApiOptions>(configuration.GetSection(nameof(ApiOptions)));
         services.Configure<CdnOptions>(configuration.GetSection(nameof(CdnOptions)));
 
         services.AddScoped<IPocketCardService, PocketCardService>();
